@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="library" version="2.5" client="site" method="upgrade">
+    <name>LIB_WOW</name>
+    <libraryname>WoW</libraryname>
+    <author>Branko Wilhelm</author>
+    <creationDate>Dez 2014</creationDate>
+    <copyright>Copyright (C) 2013 - 2016 Branko Wilhelm. All rights reserved.</copyright>
+    <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <authorEmail>branko.wilhelm@gmail.com</authorEmail>
+    <authorUrl>www.z-index.net</authorUrl>
+    <version>@REVISION@</version>
+    <description>LIB_WOW_DESC</description>
+    <files>
+        <folder>adapters</folder>
+        <folder>module</folder>
+        <file>WoW.php</file>
+    </files>
+    <scriptfile>script.installer.php</scriptfile>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.lib_wow.ini</language>
+        <language tag="en-GB">en-GB/en-GB.lib_wow.sys.ini</language>
+        <language tag="de-DE">de-DE/de-DE.lib_wow.ini</language>
+        <language tag="de-DE">de-DE/de-DE.lib_wow.sys.ini</language>
+    </languages>
+</extension>

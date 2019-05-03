@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+    <name>PLG_SYSTEM_WOW</name>
+    <author>Branko Wilhelm</author>
+    <creationDate>Dez 2013</creationDate>
+    <copyright>Copyright (C) 2013 - 2016 Branko Wilhelm. All rights reserved.</copyright>
+    <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <authorEmail>branko.wilhelm@gmail.com</authorEmail>
+    <authorUrl>www.z-index.net</authorUrl>
+    <version>@REVISION@</version>
+    <description>PLG_SYSTEM_WOW_DESC</description>
+    <files>
+        <filename plugin="wow">wow.php</filename>
+        <folder>fields</folder>
+    </files>
+    <scriptfile>script.installer.php</scriptfile>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_system_wow.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_system_wow.sys.ini</language>
+        <language tag="de-DE">de-DE/de-DE.plg_system_wow.ini</language>
+        <language tag="de-DE">de-DE/de-DE.plg_system_wow.sys.ini</language>
+    </languages>
+    <updateservers>
+        <server type="collection" priority="1" name="z-index development">http://www.z-index.net/en/extensions.xml</server>
+    </updateservers>
+    <media folder="media" destination="wow">
+        <filename>loader.gif</filename>
+        <filename>wow.css</filename>
+        <filename>wow.js</filename>
+        <filename>wow.png</filename>
+    </media>
+    <config>
+        <fields name="params" addfieldpath="/plugins/system/wow/fields/">
+            <fieldset name="basic">
+                <field name="apikey" type="info" default="" size="30" required="true" label="PLG_SYSTEM_WOW_APIKEY_LABEL" description="PLG_SYSTEM_WOW_APIKEY_DESC" info_url="https://dev.battle.net/" info_label="PLG_SYSTEM_WOW_APIKEY_INFO_LABEL" info_title="PLG_SYSTEM_WOW_APIKEY_INFO_TITLE" />
+                <field name="guild" type="text" default="" size="30" required="true" label="PLG_SYSTEM_WOW_GUILD_LABEL" description="PLG_SYSTEM_WOW_GUILD_DESC" />
+                <field name="realm" type="realms" default="" size="30" required="true" label="PLG_SYSTEM_WOW_REALM_LABEL" description="PLG_SYSTEM_WOW_REALM_DESC" />
+                <field name="region" type="list" default="" required="true" label="PLG_SYSTEM_WOW_REGION_LABEL" description="PLG_SYSTEM_WOW_REGION_DESC">
+                    <option value="">JSELECT</option>
+                    <option value="us">USA</option>
+                    <option value="eu">Europe</option>
+                    <option value="kr">Korea</option>
+                    <option value="tw">Taiwan</option>
+                    <option value="sea">Southeast Asia</option>
+                </field>
+                <field name="locale" type="list" default="" required="true" label="PLG_SYSTEM_WOW_LOCALE_LABEL" description="PLG_SYSTEM_WOW_LOCALE_DESC">
+                    <option value="">JSELECT</option>
+                    <option value="en">English</option>
+                    <option value="de">German</option>
+                    <option value="fr">Français</option>
+                    <option value="es">Español</option>
+                    <option value="it">Italiano</option>
+                    <option value="pt">Português</option>
+                    <option value="ru">Русский</option>
+                </field>
+                <field name="link" type="radio" class="btn-group" default="battle.net" required="true" label="PLG_SYSTEM_WOW_LINK_LABEL" description="PLG_SYSTEM_WOW_LINK_DESC">
+                    <option value="battle.net">battle.net</option>
+                    <option value="wowhead.com">wowhead.com</option>
+                </field>
+            </fieldset>
+            <fieldset name="advanced">
+                <field name="cache_timeout" type="text" filter="integer" default="30" required="true" label="PLG_SYSTEM_WOW_CACHE_TIMEOUT_LABEL" description="PLG_SYSTEM_WOW_CACHE_TIMEOUT_DESC" />
+                <field name="socket_timeout" type="text" filter="integer" default="10" required="true" label="PLG_SYSTEM_WOW_SOCKET_TIMEOUT_LABEL" description="PLG_SYSTEM_WOW_SOCKET_TIMEOUT_DESC" />
+                <field name="status" type="radio" class="btn-group" default="1" label="PLG_SYSTEM_WOW_STATUS_LABEL" description="PLG_SYSTEM_WOW_STATUS_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
